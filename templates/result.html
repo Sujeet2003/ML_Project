@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result | Linear Regression</title>
+    <style>
+        body{
+            background-color: black;
+            color: rgb(255, 153, 0);
+            font-family: monospace;
+        }
+        .sample div span:nth-child(odd){
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div>
+        {% for sample in sample_result %}
+        {{sample}}
+        {% endfor %}
+    </div> -->
+
+    <div class="result" style="display: flex; align-items: center; justify-content: center; flex-direction: column-reverse;">
+        <div class="sample">
+            <h3 style="font-size: 30px; text-align: center; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; text-decoration: underline;">Sample Datasets</h3>
+            {% for sample in sample_result %}
+            <div>
+                {% for key, value in sample.items %}
+                <span style="font-size: 18px;">{{ key }}: {{ value }}</span> &nbsp;
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+    
+    
+    
+        <div>
+            <h3 style="text-align: center; font-size: 30px; text-decoration: underline;">Result for the given sample</h3>
+            <p style="font-size: 20px; color: yellow;"><strong style="color: #da2d2d;"><u>Result:</u></strong> Scored marks: <span style="color: #FFF;">{{result|floatformat:0}}</span> for study hours <span style="color: #FFF;">{{hrs}}</span></p>
+        </div>
+    </div>
+</body>
+
+</html>
